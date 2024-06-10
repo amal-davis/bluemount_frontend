@@ -496,7 +496,7 @@
         </div>
     </div>
 </div>
-<div class="container portfolio-section mt-5" id="portfolio">
+<div class="container portfolio-section mt-5 reveal" id="portfolio">
     <h2 style="font-weight: 700;">MAKING MOVIES TRULY MIND-BLOWING</h2>
     <p>We challenge the boundaries of creativity as collaborators in the film-making process, bringing the filmmaker’s vision to life.</p>
     <div class="owl-carousel owl-theme portfolio-carousel">
@@ -523,7 +523,7 @@
     <div class="container">
         <div class="row">
             <!-- Service 1 -->
-            <div class="col-md-4 pt-5">
+            <div class="col-md-4 pt-5 reveal">
                 <div class="service-card">
                     <div class="service-icon">
                         <img src="assets/ad_filim_icon_images.png" alt="Icon 1" style="width: 150px; height: 150px;" class="img-fluid">
@@ -533,7 +533,7 @@
                 </div>
             </div>
             <!-- Service 2 -->
-            <div class="col-md-4 pt-5">
+            <div class="col-md-4 pt-5 reveal">
                 <div class="service-card">
                     <div class="service-icon">
                         <img src="assets/corporate_video_icon_image.png" alt="Icon 1" style="width: 150px; height: 150px;" class="img-fluid">
@@ -542,7 +542,7 @@
                     <p class="service-text" style="color: #fff;">corporate films are a versatile and powerful medium for businesses to communicate their message, engage their audience, and enhance their brand presence. Whether for marketing, training, or internal communication, well-crafted corporate films can significantly contribute to a company's success and growth.</p>
                 </div>
             </div>
-            <div class="col-md-4 pt-5">
+            <div class="col-md-4 pt-5 reveal">
                 <div class="service-card">
                     <div class="service-icon">
                         <img src="assets/photo_shoot_icon_images.png" alt="Icon 1" style="width: 150px; height: 150px;" class="img-fluid">
@@ -583,7 +583,7 @@
     <h3 class="mb-5 " style="color: #fff;">CREATIVE DIGITAL SERVICES</h3>
 
     <div class="row justify-content-center align-items-center">
-        <div class="col-md-4 pt-5">
+        <div class="col-md-4 pt-5 reveal">
             <div class="service-card">
                 <div class="service-icon">
                     <img src="assets/motion_graphics_icon_image.png" alt="Icon 1" style="width: 150px; height: 150px;" class="img-fluid">
@@ -592,7 +592,7 @@
                 <p class="service-text" style="color: #fff;">Motion graphics are a powerful visual communication tool that combines graphic design, animation, and multimedia elements to create engaging and dynamic content. Used extensively in marketing, advertising, film, and digital media, motion graphics bring static images to life and effectively convey messages through movement and storytelling.</p>
             </div>
         </div>
-        <div class="col-md-4 pt-5">
+        <div class="col-md-4 pt-5 reveal">
             <div class="service-card">
                 <div class="service-icon">
                     <img src="assets/vfx_icon_images.png" alt="Icon 1" style="width: 150px; height: 150px;" class="img-fluid">
@@ -601,7 +601,7 @@
                 <p class="service-text" style="color: #fff;">VFX (Visual Effects) and Animation are transformative technologies in the world of visual storytelling. They play a crucial role in film, television, advertising, video games, and various digital platforms, enabling the creation of scenes and effects that would be impossible or impractical to achieve in real life.</p>
             </div>
         </div>
-        <div class="col-md-4 pt-5">
+        <div class="col-md-4 pt-5 reveal">
             <div class="service-card">
                 <div class="service-icon">
                     <img src="assets/designing_icon_image.png" alt="Icon 1" style="width: 150px; height: 150px;" class="img-fluid">
@@ -717,15 +717,15 @@
 <div class="container-fluid info-section">
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-4 info-box">
+            <div class="col-md-4 info-box reveal">
                 <i class="fas fa-map-marker-alt"></i>
                 <p>T.C 17/3478, 1st Floor, Relcon Plaza, Opposite LIC, Pattom Thiruvanathapuram,695004</p>
             </div>
-            <div class="col-md-4 info-box">
+            <div class="col-md-4 info-box reveal">
                 <i class="fas fa-phone"></i>
                 <p>+91 9778385244</p>
             </div>
-            <div class="col-md-4 info-box">
+            <div class="col-md-4 info-box reveal">
                 <i class="fas fa-envelope"></i>
                 <p>bluemountproduction@gmail.com</p>
             </div>
@@ -787,8 +787,23 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+
 
 <script>
+document.addEventListener("DOMContentLoaded", function() {
+    ScrollReveal().reveal('.reveal', {
+      origin: 'bottom',
+      distance: '50px',
+      duration: 1000,
+      easing: 'ease-in-out',
+      reset: true // Set to false if you don't want the animation to reset when scrolling up
+    });
+  });
+
+
+
+
 $(window).on('scroll', function() {
         var scrollTop = $(window).scrollTop();
         $('.jumbotron-section').css('background-position', 'center ' + (scrollTop * 0.5) + 'px');
